@@ -1,0 +1,66 @@
+Test was extremely vague and I didn't know what Cucumber/Gherkin were so had to do a bit of research about it.
+Cucumber is apparently an open source tool that tests business-readable specs against coade (so puts it in english)
+
+First things first, downloaded the MASTER zip that was included in the email -> Extreacted to local directory
+
+Installed IntelliJ IDEA (1.2GB jeez!) with .java NOT .groovy
+Installed Java SE 10.0.2
+Installed Apache Maven 3.5.4 (Absolute headache)
+Downloaded IntelliJ IDEA Cucumber for Java Plugin
+
+IMPORTED BASE JAVA PROJECT:
+Reimported all maven projects -> "Following module has incorrect" type message given -> Rebuilt
+Using CMD, "ran mvn clean test" -> Build Success
+Created testing directory and resources sub-directory -> set resources as Test Resources Root
+Created techtest sub-directory within resources and created belly.feature file (This is just to learn the syntax)
+
+
+===================================================================================================================
+EXAMPLE STUFF
+===================================================================================================================
+BELLY.FEATURE: Created an example scenario about eating food
+
+ADDING THE RUNNER: Have to create a java runner to run the feature tests
+Created new Java class in techtest directory -> RunCuccTest.java
+Threw an error -> Turns out SDK wasn't set -> Set to Java SE 10.0.2
+
+ADDING THE STEP DEFINITIONS: New java class created -> StepDefinitions.java
+Input the snippets given when running the testrunner
+Add imports for given, when, then & pendingexception to fix errors
+Create BELLY.JAVA
+
+
+===================================================================================================================
+SOMETHING INTERESTING
+===================================================================================================================
+Ok so time to figure out what the hell I'm doing. I looked up API interrogation and got a stackoverflow post
+asking WORD FOR WORD (literally copy pasted from the README) how to do this. Check it out here:
+https://stackoverflow.com/questions/45463338/testing-apis-with-gherkin-java-and-intellij-idea
+(In my opinion and apparently this guy agrees, the specification is too vague)
+
+===================================================================================================================
+MAIN WORK
+===================================================================================================================
+Have a link to the API (http://turing.niallbunting.com:3001/) -> Assume that I must request it through intellij
+Attempting to request a connect is REFUSED -> Try again
+
+Host/port = the turing URL
+ADD: Header -> Content-Type VALUE: application/json
+SPECIFY PARAMETERS -> Song = /api/video & Playlist = /api/playlist
+RESULTS IN: SERVER STATUS: 404
+
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" -Anthony J C Pearce MComp (2018)
+
+Emailed Jay to see if she could get someone to sort it
+
+
+
+
+
+
+
+
+
+
+
+
